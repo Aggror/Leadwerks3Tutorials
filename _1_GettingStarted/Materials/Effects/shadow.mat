@@ -1,0 +1,14 @@
+//Leadwerks Material File
+
+blendmode=2
+castshadows=0
+zsort=1
+cullbackfaces=1
+depthtest=1
+diffuse=1.00000000,1.00000000,1.00000000,1.00000000
+specular=0.000000000,0.000000000,0.000000000,0.000000000
+depthmask=0
+
+shader="shaders\nolight\diffuse.shader"
+texture0=".\shadow.tex"
+alwaysuseshader=1
