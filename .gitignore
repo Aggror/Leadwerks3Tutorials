@@ -2,6 +2,9 @@
 *.user
 *.aps
 *.pch
+*.pdb
+*.sdf
+*.opensdf
 *.vspscc
 *_i.c
 *_p.c
