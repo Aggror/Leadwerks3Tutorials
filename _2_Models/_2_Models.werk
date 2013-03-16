@@ -1,6 +1,0 @@
-SourceCodeFileExtensions="cpp,c,hpp,h"
-ScanFiles = "lua,cpp,c,hpp,h"
-ScanAndReplaceFiles="cpp,project,xml,launch,sln,vcxproj,xcbkptlist,filters,mk,pbxproj,xcworkspace,xcworkspacedata,app,xcscheme,plist,xcodeproj,mm,pch,plist"
-AssetFileExtensions = "mat,tex,vert,frag,geom,eval,tess,mdl,wav,ogg,ttf,lua,scene"
-AssetSourceFileExtensions = "max,psd,bmp,jpg,jpeg,tga,png,dds,obj,fbx,max,maya,dae,blend"
-RequiredFileExtensions = "shader"

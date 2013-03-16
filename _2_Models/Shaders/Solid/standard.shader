@@ -1,1 +1,0 @@
-SHADER version 1
