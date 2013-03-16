@@ -24,23 +24,29 @@ bool App::Start()
 
 bool App::Loop()
 {
+	
+
 	//Close the window to end the program
 	if (window->Closed()) return false;
     
 	move.x += 1 * Time::GetSpeed();
+
 
 	////////////////////////////////
 	Time::Update();
 	world->Update();
 	world->Render();
 	/////////////////////////////////////
+
 	context->Clear();
 	context->SetColor(120,120,0);
 	context->DrawRect(0, 0, 100, 60);
 	context->SetBlendMode(Blend::Alpha);
 	context->SetColor(255,0,0);
 	context->DrawText("Hello world!",move.x,move.y );
-	//context->SetColor(0,0,0);
+	context->SetBlendMode(Blend::Solid);
+	context->SetColor(0,0,0);
+	
 
 	context->Sync();
 	
