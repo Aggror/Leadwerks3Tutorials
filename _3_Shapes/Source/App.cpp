@@ -49,16 +49,6 @@ bool App::Start()
 	box1->SetShape(boxShape);
 	box1->SetMass(1);
 	boxShape->Release();
-
-	// Create a second box
-	box2 = Model::Box();
-	box2->SetMaterial(stoneMaterial);
-	box2->SetPosition(0.2,2,0);
-
-	Shape* box2Shape = Shape::Box();
-	box2->SetShape(box2Shape);
-	box2->SetMass(1);
-	box2Shape->Release();
 	
 	//Create an array
 	Shape* tempShape = Shape::Box();
