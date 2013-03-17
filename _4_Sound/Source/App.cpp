@@ -6,7 +6,6 @@ App::App() : window(NULL), context(NULL), world(NULL), camera(NULL) {}
 
 App::~App() { delete world; delete window; }
 
-Source* s_engine;
 Source* s_guitar;
 
 bool App::Start()
