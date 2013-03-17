@@ -11,8 +11,6 @@ public:
 	World* world;
 	Camera* camera;
 
-	Vec2 move;
-
 	App();
 	virtual ~App();
 	
