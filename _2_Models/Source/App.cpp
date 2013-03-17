@@ -49,7 +49,6 @@ bool App::Start()
 	pumpkinMaterial = Material::Load("Models/pumpkin.mat");
 	pumpkin->SetMaterial(pumpkinMaterial);
 
-
 	//Create light
 	light = DirectionalLight::Create(camera);
 	light->SetRotation(45,45,0);
