@@ -28,6 +28,7 @@ bool App::Start()
 	s_guitar->SetSound(guitar);
 	s_guitar->SetLoopMode(true);
 	s_guitar->Play();
+	guitar->Release();
 
 	return true;
 }
@@ -56,14 +57,7 @@ bool App::Loop()
 	if (window->KeyHit(Key::A))
 		s_guitar->SetPitch(s_guitar->pitch - 0.1);
 	else if (window->KeyHit(Key::D))
-        s_guitar->SetPitch(s_guitar->GetPitch() + 0.1);
-
-	//Change box
-	if (window->KeyHit(Key::A))
-		s_guitar->SetPitch(s_guitar->pitch - 0.1);
-	else if (window->KeyHit(Key::D))
-        s_guitar->SetPitch(s_guitar->GetPitch() + 0.1);
-	
+        s_guitar->SetPitch(s_guitar->pitch + 0.1);	
 
 	Time::Update();
 	world->Update();
