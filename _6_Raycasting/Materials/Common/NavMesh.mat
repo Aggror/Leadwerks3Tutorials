@@ -1,0 +1,10 @@
+//Leadwerks Material File
+
+blendmode=1
+castshadows=0
+zsort=0
+cullbackfaces=1
+depthtest=1
+diffuse=0.000000000,1.00000000,0.000000000,0.501960814
+specular=0.000000000,0.000000000,0.000000000,0.000000000
+

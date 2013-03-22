@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\App.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="C:/Leadwerks\Engine\Library\Windows\Release\Leadwerks.lib">
+      <Filter>Libraries\Release</Filter>
+    </Library>
+    <Library Include="C:/Leadwerks\Engine\Library\Windows\Debug\Leadwerks.lib">
+      <Filter>Libraries\Debug</Filter>
+    </Library>
+    <Library Include="C:/Leadwerks\Engine\Library\Windows\OpenAL32.lib">
+      <Filter>Libraries</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{e89d755a-195a-4b0a-9cc2-036e64344b46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a9d2744f-98c2-4960-86b2-c4847cd78986}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{993777b6-5434-4cb9-93a3-2b1b29e6cdf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\Debug">
+      <UniqueIdentifier>{fb24eefb-5917-446b-b071-20a6c150db64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\Release">
+      <UniqueIdentifier>{13d3a086-3e1f-40ad-934b-ed07b787db95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\App.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
