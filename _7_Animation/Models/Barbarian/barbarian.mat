@@ -1,0 +1,15 @@
+//Leadwerks Material File
+
+blendmode=0
+castshadows=1
+zsort=0
+cullbackfaces=1
+depthtest=1
+diffuse=1.00000000,1.00000000,1.00000000,1.00000000
+specular=0.000000000,0.000000000,0.000000000,0.000000000
+lightingmode=1
+
+shader="shaders\dynamic\diffuse+normal.shader"
+texture0=".\barbarian.tex"
+texture1=".\barbarian_dot3.tex"
+texture2=".\barbarian_spec.tex"
