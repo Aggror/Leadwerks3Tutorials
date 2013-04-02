@@ -6,7 +6,6 @@ App::App() : window(NULL), context(NULL), world(NULL), camera(NULL) {}
 
 App::~App() { delete world; delete window; }
 
-
 Model* barbarian;
 enum BarbarianAnimation
 {
@@ -28,6 +27,7 @@ float StartTimer;
 float frameTime;
 bool playAnimation;
 
+//Camera controls
 Vec3 camRot;
 Pivot* camPivot;
 
@@ -75,26 +75,31 @@ bool App::Loop()
 	//Close the window to end the program
 	if (window->Closed()||window->KeyHit(Key::Escape)) return false;
   
-
+	/*
+	//Check for P key to be hit
 	if(window->KeyHit(Key::P) && playAnimation)
 	{
 		playAnimation = true;
 		StartTimer = Time::GetCurrent() /100;
 	}
 
-	//switch animations
+	//Play animation once
 	if(playAnimation)
 	{
 		frameTime = (Time::GetCurrent()/100) - StartTimer;
+
+		//If the timer value is less than the length of the animation, we play the animation
 		if(frameTime < barbarian->GetAnimationLength(BarbarianAnimation::Dieing))
 			barbarian->SetAnimationFrame(frameTime , blend, BarbarianAnimation::Dieing, true);
 		else
 			playAnimation = false;
 	}
+	*/
 
 	//switch animations
 	if(window->KeyHit(Key::A))
 	{
+		//If the index is lower than 0, set the index back to the last animation sequence
 		if(barbAnim - 1 < 0)
 			barbAnim = BarbarianAnimation::Walking;
 		else
@@ -104,6 +109,7 @@ bool App::Loop()
 	}
 	if(window->KeyHit(Key::D))
 	{
+		//If the index is higher than the amount of animation sequences, set the index back to the first one
 		if(barbAnim + 1 > 6)
 			barbAnim = BarbarianAnimation::Dieing;
 		else
@@ -128,18 +134,22 @@ bool App::Loop()
 	camera->Move(0,0,camRot.z);
 	window->SetMousePosition(window->GetWidth()/2,  window->GetHeight()/2);
 
+/*
+	//Update Timer
+	float t = (Time::GetCurrent() / 100) * animationSpeed;
+	
+	//increment Blending
+	blend += 0.01 * Time::GetSpeed();
+	blend = 1;
+	if(blend > 1)
+		blend = 1;
+	barbarian->SetAnimationFrame(t , blend, barbAnim, true);
 
-	//Animate
-	//float t = (Time::GetCurrent() / 100) * animationSpeed;
-	//blend += 0.01 * Time::GetSpeed();
-	//blend = 1;
-	//barbarian->SetAnimationFrame(t , blend, barbAnim, true);
-
-	/*
+	//Simulate moving and attacking by storing the keys being pressed
 	float moving = window->KeyDown(Key::W);
 	float attacking = window->KeyDown(Key::Enter);
-
 	float t = (Time::GetCurrent() / 100) * animationSpeed;
+
 	if(moving == 1 && attacking == 1)
 	{
 		//attack and run
