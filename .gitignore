@@ -4,7 +4,6 @@
 *.pch
 *.pdb
 *.sdf
-*.vcxproj
 *.opensdf
 *.vspscc
 *_i.c
