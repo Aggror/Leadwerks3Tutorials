@@ -23,6 +23,11 @@ BarbarianAnimation barbAnim = BarbarianAnimation::Idle;
 float animationSpeed;
 float blend;
 
+//once animation
+float StartTimer;
+float frameTime;
+bool playAnimation;
+
 Vec3 camRot;
 Pivot* camPivot;
 
@@ -30,7 +35,7 @@ Pivot* camPivot;
 bool App::Start()
 {
 	//Create a window
-	window = Window::Create("_7_Animation", 100, 0, 1024, 768 );
+	window = Window::Create("_7_Animation", 100, 100, 1024, 768 );
 	
 	//Create a context
 	context = Context::Create(window);
@@ -47,14 +52,20 @@ bool App::Start()
 	camPivot = Pivot::Create();
 	window->HideMouse();
 
-
 	//Load a model
 	barbarian = Model::Load("Models/Barbarian/barbarian.mdl");
+	if(barbarian == NULL)
+		cout << "asdf" <<endl;
 	barbarian->SetRotation(0,45,0);
 	camRot = (0,0,-4);
 
 	animationSpeed = 1.0;
 	blend = 1.0;
+
+	//once animation
+	StartTimer = 0;
+	frameTime = 0;
+	playAnimation = false;
 	
 	return true;
 }
@@ -64,6 +75,23 @@ bool App::Loop()
 	//Close the window to end the program
 	if (window->Closed()||window->KeyHit(Key::Escape)) return false;
   
+
+	if(window->KeyHit(Key::P) && playAnimation)
+	{
+		playAnimation = true;
+		StartTimer = Time::GetCurrent() /100;
+	}
+
+	//switch animations
+	if(playAnimation)
+	{
+		frameTime = (Time::GetCurrent()/100) - StartTimer;
+		if(frameTime < barbarian->GetAnimationLength(BarbarianAnimation::Dieing))
+			barbarian->SetAnimationFrame(frameTime , blend, BarbarianAnimation::Dieing, true);
+		else
+			playAnimation = false;
+	}
+
 	//switch animations
 	if(window->KeyHit(Key::A))
 	{
@@ -83,7 +111,6 @@ bool App::Loop()
 
 		blend = 0;
 	}
-	//barbAnim = (barbAnim - 1  < 0 ? barbAnims::Walking : static_cast<barbAnims>(barbAnim - 1) );
 
 	//Mouse controls
 	if(window->MouseDown(1))
@@ -108,7 +135,7 @@ bool App::Loop()
 	//blend = 1;
 	//barbarian->SetAnimationFrame(t , blend, barbAnim, true);
 
-
+	/*
 	float moving = window->KeyDown(Key::W);
 	float attacking = window->KeyDown(Key::Enter);
 
@@ -141,7 +168,7 @@ bool App::Loop()
 		barbarian->SetAnimationFrame(t , blend, barbAnim, true);
 	}
 
-
+	*/
 
 	Time::Update();
 	world->Update();
@@ -158,6 +185,7 @@ bool App::Loop()
 		context->DrawText("Hold and move right mouse button to zoom." ,0, 15);
 		context->DrawText("Use A and D to cycle sequences. " ,0, 30);
 		context->DrawText("Current animation sequence: " +  String(barbAnim), 0, 45);
+		context->DrawText("Press P to play dieing animation once.", 0, 60);
 	context->SetBlendMode(Blend::Solid);
 
 	context->Sync(true);
