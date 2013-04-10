@@ -1,13 +1,11 @@
 #Ignore files build by Visual Studio
-
 *.aps
 *.pch
+*.sdf
 *.pdb
-
 *_i.c
 *_p.c
 *.ncb
-
 *.bak
 *.cache
 *.ilk
