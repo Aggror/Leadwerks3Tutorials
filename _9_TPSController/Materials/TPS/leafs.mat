@@ -1,0 +1,5 @@
+texture0=.\leafs.tex
+lightingmode=2
+texture3="Materials\Common\lightmap.tex"
+texture4="Materials\Common\lightvectormap.tex"
+shader="Shaders/Lightmapped/diffuse.shader"

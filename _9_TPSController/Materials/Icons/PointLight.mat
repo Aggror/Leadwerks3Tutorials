@@ -1,0 +1,13 @@
+//Leadwerks Material File
+
+blendmode=0
+castshadows=1
+zsort=1
+cullbackfaces=1
+depthtest=1
+diffuse=1.00000000,1.00000000,1.00000000,1.00000000
+specular=0.000000000,0.000000000,0.000000000,0.000000000
+lightingmode=1
+
+shader="shaders\editor\sprite.shader"
+texture0=".\pointlight.tex"

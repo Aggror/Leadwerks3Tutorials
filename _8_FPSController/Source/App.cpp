@@ -33,12 +33,6 @@ float cameraTopAngle;
 float cameraBottomAngle;
 float camSmoothing;
 
-
-void PlayerUpdate(Entity* entity)
-{
-	entity->SetInput(camRotation.y, playerMovement.z, playerMovement.x, tempJumpForce , crouched, 1);
-}
-
 bool App::Start()
 {
 	//Create a window
@@ -70,13 +64,6 @@ bool App::Start()
 	player->SetPosition(0,4,0);
     player->SetMass(5);
     player->SetPhysicsMode(Entity::CharacterPhysics);
-	player->AddHook(Entity::UpdatePhysicsHook,PlayerUpdate);
-
-	//Create a visible mesh
-	//playerMesh = Model::Cylinder(16,player);
-	//playerMesh->SetPosition(0,1,0);
-    //playerMesh->SetScale(1,2,1);
-	
 
 	//Set some variables
 	moveSpeed			= 6;

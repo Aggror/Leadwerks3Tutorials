@@ -1,0 +1,4 @@
+texture0=.\greengrid.tex
+lightingmode=2
+texture3="Materials\Common\lightmap.tex"
+shader="Shaders/Lightmapped/diffuse.shader"

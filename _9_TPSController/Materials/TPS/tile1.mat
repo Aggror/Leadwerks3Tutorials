@@ -1,0 +1,3 @@
+texture0=.\tile1.tex
+lightingmode=1
+shader="Shaders/Dynamic/diffuse.shader"
