@@ -8,6 +8,11 @@ Script.otherEntity = "" --entity
 
 function Script:Start()
 
+	-- A comment
+	--[[
+		a multi-line comment
+	--]]
+
 	System:Print("hello world")
 
 	if self.alive == false then
