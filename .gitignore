@@ -16,4 +16,6 @@
 obj/
 ipch/
 [Rr]elease*/
-_ReSharper*/
+
+
+*.meta
