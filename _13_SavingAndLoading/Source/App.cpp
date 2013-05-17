@@ -7,6 +7,7 @@ App::App() : window(NULL), context(NULL), world(NULL), camera(NULL) {}
 App::~App() { delete world; delete window; }
 
 Stream* myData;
+Stream* myText;
 
 bool App::Start()
 {
@@ -38,6 +39,27 @@ bool App::Start()
 
 	//Set read/write cursor
 	myData->Seek(0);
+
+	System::Print(myData->ReadInt());
+	System::Print(myData->ReadFloat());
+	System::Print(myData->ReadString() + myData->ReadString() + myData->ReadString() );
+
+	//Create another stream
+	myText = FileSystem::ReadFile("myText.txt");
+	if (myText == NULL) 
+		Debug::Error("The file does not exist!");
+
+	//Read the entire text file
+	while (!myText->EOF())
+	{
+		System::Print(myText->ReadLine());
+	}
+
+	//Free from memory
+	myData->Release();
+	myText->Release();
+
+
 	return true;
 }
 
@@ -51,13 +73,6 @@ bool App::Loop()
 	world->Update();
 	world->Render();
 
-	context->SetBlendMode(Blend::Alpha);
-    context->SetColor(1,1,1);
-	 
-	context->DrawText("int: " + String(myData->ReadInt()) , 0, 25);
-	context->DrawText("float: " + String(myData->ReadFloat()) , 0, 40);
-	context->DrawText("string: " + myData->ReadLine() + myData->ReadLine() + myData->ReadLine() , 0, 55);
-    context->SetBlendMode(Blend::Solid);
 
 	context->Sync(false);
 	
