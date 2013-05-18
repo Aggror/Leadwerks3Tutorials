@@ -1,27 +1,111 @@
 #include "App.h"
-#include "../Source/Libraries/rapidxml-1.13/rapidxml.hpp"
-#include "../Source/Libraries/rapidxml-1.13/rapidxml_print.hpp"
+#include "../Source/Libraries/pugixml-1-2/pugixml.hpp"
 
 using namespace Leadwerks;
-using namespace rapidxml;
+using namespace pugi;
 
 App::App() : window(NULL), context(NULL), world(NULL), camera(NULL) {}
 
 App::~App() { delete world; delete window; }
 
+//Streams
 Stream* myData;
 Stream* myText;
 
-list<Entity*> entities;
+//Store entities
+vector<Entity*> entities;
 
 //Xml file
-xml_document<> doc;
+pugi::xml_document xmlStorage;
 
+//Store all entities when map is loaded
 void StoreWorldObjects(Entity* entity, Object* extra)
 {
 	System::Print("Loaded an entity and stored it: " + entity->GetKeyValue("name"));
 	entities.push_back(entity);
+	
 }
+
+//SaveToXML
+void SaveToXML()
+{
+	//Reset the file
+	xmlStorage.reset();
+
+	//Root node
+	xml_node rootNode = xmlStorage.append_child("Game");
+		
+
+	// Entities node stores entities
+	xml_node entitiesNode = rootNode.append_child("Entities");
+	
+	//Store position of every entity
+	vector<Entity*>::iterator iter = entities.begin();
+	int id = 0;
+	for( iter; iter != entities.end(); iter++)
+	{
+		Entity* entity = *iter;
+		Vec3 pos = entity->GetPosition();
+
+		// Entities node stores entities
+		xml_node entityNode = entitiesNode.append_child("Entity");
+
+		// Store ID node
+		xml_node idNode = entityNode.append_child("ID");
+		idNode.append_attribute("value") = id;
+		id++;
+		
+		// Entities node stores entities
+		xml_node positionNode = entityNode.append_child("Position");
+		positionNode.append_attribute("X") = pos.x;
+		positionNode.append_attribute("Y") = pos.y;
+		positionNode.append_attribute("Z") = pos.z;
+	}
+
+	// save document to file
+	xmlStorage.save_file("save_file_output.xml");
+	System::Print("Game saved!");
+}
+
+
+float XMLToFloat(const char * str)
+{
+	return atof(str);
+}
+
+
+//LoadFromXML
+void LoadFromXML()
+{
+	//Load the xml file
+	xmlStorage.load_file("save_file_output.xml");
+	
+	//Find the entities node
+	xml_node entitiesNode = xmlStorage.child("Game").child("Entities");
+
+	//Go through all entities
+	int i = 0;
+	for (xml_node entity = entitiesNode.first_child(); entity; entity = entity.next_sibling())
+	{
+		//Retrieve idNode
+		xml_node idNode = entity.child("ID");
+		int id = XMLToFloat(idNode.attribute("X").value());
+
+		//Retrieve positionNode
+		xml_node positionNode = entity.child("Position");
+		//std::cout << "X: " << positionNode.attribute("X").value();
+		//std::cout << "Y: " << positionNode.attribute("Y").value();
+		//std::cout << "Z: " << positionNode.attribute("Z").value();
+		entities[id]->SetPosition(XMLToFloat(positionNode.attribute("X").value()),
+										XMLToFloat(positionNode.attribute("Y").value()),
+										XMLToFloat(positionNode.attribute("Z").value()));
+	
+	}
+	
+	System::Print("Game loaded!");
+}
+
+
 
 bool App::Start()
 {
@@ -41,11 +125,11 @@ bool App::Start()
 	//Loading and saving with LE3 API
 	/*
 	//Save some data
-	myData = FileSystem::WriteFile("myData.aggror");
+	myData = FileSystem::WriteFile("myData.dat");
 
 	//Write some data
-	myData->WriteInt(2);
-	//myData->WriteFloat(1.7);
+	//myData->WriteInt(2);
+	myData->WriteFloat(1.7);
 	//myData->WriteString("Hello world");
 	//myData->WriteString("Hello computer");
 	//myData->WriteLine("Hello Word with a new line");
@@ -53,8 +137,8 @@ bool App::Start()
 	//Set read/write cursor
 	myData->Seek(0);
 
-	System::Print(myData->ReadInt());
-	//System::Print(myData->ReadFloat());
+	//System::Print(myData->ReadInt());
+	System::Print(myData->ReadFloat());
 	//System::Print(myData->ReadString() + myData->ReadString() + myData->ReadString() );
 
 	//Create another stream
@@ -65,7 +149,7 @@ bool App::Start()
 	//Read the entire text file
 	while (!myText->EOF())
 	{
-	//System::Print(myText->ReadLine());
+		System::Print(myText->ReadLine());
 	}
 
 	//Free from memory
@@ -86,69 +170,27 @@ bool App::Loop()
 	//Close the window to end the program
 	if (window->Closed()) return false;
 
+	//Place the oildrum somewhere else
 	if(window->KeyHit(Key::Space))
 	{
-		list<Entity*>::iterator iter = entities.begin();
+		vector<Entity*>::iterator iter = entities.begin();
 		for( iter; iter != entities.end(); iter++)
 		{
 			Entity* entity = *iter;
-			if(entity->GetKeyValue("name") == "Player")
+			if(entity->GetKeyValue("name") == "Oildrum")
 			{
-				entity->SetPosition(-1,1,1);
+				entity->SetPosition(-3,2,-1);
 			}
 		}
 	}
 
 	//Save
 	if(window->KeyHit(Key::S))
-	{
-		//Create XML object
-		xml_node<>* decl = doc.allocate_node(node_declaration);
-		decl->append_attribute(doc.allocate_attribute("version", "1.0"));
-		decl->append_attribute(doc.allocate_attribute("encoding", "utf-8"));
-		doc.append_node(decl);
+		SaveToXML();
 
-		//Createa  root of the xml
-		xml_node<>* root = doc.allocate_node(node_element, "GameRoot");
-		root->append_attribute(doc.allocate_attribute("version", "1.0"));
-		root->append_attribute(doc.allocate_attribute("info", "The root of my level Data"));
-		doc.append_node(root);
-
-		//Store position of every entity
-		list<Entity*>::iterator iter = entities.begin();
-		for( iter; iter != entities.end(); iter++)
-		{
-			Entity* entity = *iter;
-			Vec3 pos = entity->GetPosition();
-			System::Print(pos.x);
-			//Create an entity root and store it in the game root
-			xml_node<>* entityRoot = doc.allocate_node(node_element, "Entity");
-			root->append_node(entityRoot);
- 
-
-			//Create an entity root and store it in the game root
-			xml_node<>* posRoot = doc.allocate_node(node_element, "Position");
-		//	char* test = String((pos.x)).c_str();
-			posRoot->append_attribute(doc.allocate_attribute("x", ));
-			posRoot->append_attribute(doc.allocate_attribute("y", "77"));
-			posRoot->append_attribute(doc.allocate_attribute("z", "123.345"));
-			entityRoot->append_node(posRoot);			
-		}
-		// Convert doc to string if needed
-		string levelDataString;
-		rapidxml::print(std::back_inserter(levelDataString), doc);
-		System::Print(levelDataString);
-
-		//Save the xml to a file
-		Stream* levelDataStream = FileSystem::WriteFile("levelData.xml");
-		levelDataStream->WriteString(levelDataString);
-
-		//Cleaning things up
-		levelDataStream->Release();
-		doc.clear();
-	}
-
-
+	//Load
+	if(window->KeyHit(Key::L))
+		LoadFromXML();
 
 	Time::Update();
 	world->Update();

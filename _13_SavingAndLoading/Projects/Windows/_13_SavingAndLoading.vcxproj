@@ -112,14 +112,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\App.cpp" />
+    <ClCompile Include="..\..\Source\Libraries\pugixml-1-2\pugixml.cpp" />
     <ClCompile Include="..\..\Source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\App.h" />
-    <ClInclude Include="..\..\Source\Libraries\rapidxml-1.13\rapidxml.hpp" />
-    <ClInclude Include="..\..\Source\Libraries\rapidxml-1.13\rapidxml_iterators.hpp" />
-    <ClInclude Include="..\..\Source\Libraries\rapidxml-1.13\rapidxml_print.hpp" />
-    <ClInclude Include="..\..\Source\Libraries\rapidxml-1.13\rapidxml_utils.hpp" />
+    <ClInclude Include="..\..\Source\Libraries\pugixml-1-2\pugiconfig.hpp" />
+    <ClInclude Include="..\..\Source\Libraries\pugixml-1-2\pugixml.hpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuildStep Include="C:/Leadwerks\Engine\Library\StaticLib\Debug\Leadwerks.lib">
@@ -141,7 +140,7 @@
     </Library>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\levelData.xml" />
+    <None Include="..\..\save_file_output.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

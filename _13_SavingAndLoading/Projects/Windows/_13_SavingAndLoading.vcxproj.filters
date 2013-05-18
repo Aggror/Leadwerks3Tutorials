@@ -7,6 +7,9 @@
     <ClCompile Include="..\..\Source\main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Libraries\pugixml-1-2\pugixml.cpp">
+      <Filter>Source\XML</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="C:/Leadwerks\Engine\Library\Windows\Release\Leadwerks.lib">
@@ -38,27 +41,22 @@
     <Filter Include="Header Files\XML">
       <UniqueIdentifier>{2a765211-ec4a-417c-b6e2-6f7fc8ecc07b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\XML">
+      <UniqueIdentifier>{ebc98f22-b831-4d99-9552-16704890c80e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\App.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Libraries\rapidxml-1.13\rapidxml_print.hpp">
+    <ClInclude Include="..\..\Source\Libraries\pugixml-1-2\pugixml.hpp">
       <Filter>Header Files\XML</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Libraries\rapidxml-1.13\rapidxml_utils.hpp">
-      <Filter>Header Files\XML</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Libraries\rapidxml-1.13\rapidxml.hpp">
-      <Filter>Header Files\XML</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Libraries\rapidxml-1.13\rapidxml_iterators.hpp">
+    <ClInclude Include="..\..\Source\Libraries\pugixml-1-2\pugiconfig.hpp">
       <Filter>Header Files\XML</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\levelData.xml">
-      <Filter>Source</Filter>
-    </None>
+    <None Include="..\..\save_file_output.xml" />
   </ItemGroup>
 </Project>
