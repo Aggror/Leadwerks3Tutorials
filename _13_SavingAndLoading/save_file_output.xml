@@ -3,455 +3,387 @@
 	<Entities>
 		<Entity>
 			<ID value="0" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.98627" Z="8.95325" />
 		</Entity>
 		<Entity>
 			<ID value="1" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.82803" Z="2.16321" />
 		</Entity>
 		<Entity>
 			<ID value="2" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.30921" Z="5.0192" />
 		</Entity>
 		<Entity>
 			<ID value="3" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.691733" Z="1.51143" />
 		</Entity>
 		<Entity>
 			<ID value="4" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.634297" Z="8.57448" />
 		</Entity>
 		<Entity>
 			<ID value="5" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.45241" Z="1.64272" />
 		</Entity>
 		<Entity>
 			<ID value="6" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.33363" Z="5.14747" />
 		</Entity>
 		<Entity>
 			<ID value="7" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.277078" Z="2.80126" />
 		</Entity>
 		<Entity>
 			<ID value="8" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.3314" Z="1.8663" />
 		</Entity>
 		<Entity>
 			<ID value="9" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.11023" Z="5.51277" />
 		</Entity>
 		<Entity>
 			<ID value="10" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.46028" Z="6.84903" />
 		</Entity>
 		<Entity>
 			<ID value="11" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.265236" Z="5.29112" />
 		</Entity>
 		<Entity>
 			<ID value="12" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.27702" Z="1.80395" />
 		</Entity>
 		<Entity>
 			<ID value="13" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.526322" Z="9.29795" />
 		</Entity>
 		<Entity>
 			<ID value="14" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.10169" Z="4.22843" />
 		</Entity>
 		<Entity>
 			<ID value="15" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.49751" Z="4.36549" />
 		</Entity>
 		<Entity>
 			<ID value="16" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.171636" Z="6.85617" />
 		</Entity>
 		<Entity>
 			<ID value="17" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.40648" Z="8.28636" />
 		</Entity>
 		<Entity>
 			<ID value="18" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.38939" Z="9.51466" />
 		</Entity>
 		<Entity>
 			<ID value="19" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.58547" Z="7.7763" />
 		</Entity>
 		<Entity>
 			<ID value="20" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.56944" Z="3.04682" />
 		</Entity>
 		<Entity>
 			<ID value="21" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.918638" Z="5.01865" />
 		</Entity>
 		<Entity>
 			<ID value="22" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.24723" Z="3.45387" />
 		</Entity>
 		<Entity>
 			<ID value="23" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.39985" Z="3.19349" />
 		</Entity>
 		<Entity>
 			<ID value="24" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.76516" Z="4.91345" />
 		</Entity>
 		<Entity>
 			<ID value="25" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.04743" Z="8.90078" />
 		</Entity>
 		<Entity>
 			<ID value="26" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.89187" Z="3.83236" />
 		</Entity>
 		<Entity>
 			<ID value="27" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.68932" Z="7.88095" />
 		</Entity>
 		<Entity>
 			<ID value="28" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.733024" Z="7.58843" />
 		</Entity>
 		<Entity>
 			<ID value="29" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.825861" Z="9.94232" />
 		</Entity>
 		<Entity>
 			<ID value="30" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.0777916" Z="9.11805" />
 		</Entity>
 		<Entity>
 			<ID value="31" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.14777" Z="2.49693" />
 		</Entity>
 		<Entity>
 			<ID value="32" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.971587" Z="3.00534" />
 		</Entity>
 		<Entity>
 			<ID value="33" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.560289" Z="7.61919" />
 		</Entity>
 		<Entity>
 			<ID value="34" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.93347" Z="6.23075" />
 		</Entity>
 		<Entity>
 			<ID value="35" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.73098" Z="1.0206" />
 		</Entity>
 		<Entity>
 			<ID value="36" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.707144" Z="6.2324" />
 		</Entity>
 		<Entity>
 			<ID value="37" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.20887" Z="4.86346" />
 		</Entity>
 		<Entity>
 			<ID value="38" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.00567633" Z="6.43867" />
 		</Entity>
 		<Entity>
 			<ID value="39" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.93271" Z="4.80221" />
 		</Entity>
 		<Entity>
 			<ID value="40" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.0053103" Z="1.92837" />
 		</Entity>
 		<Entity>
 			<ID value="41" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.44166" Z="3.17481" />
 		</Entity>
 		<Entity>
 			<ID value="42" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.07306" Z="1.37437" />
 		</Entity>
 		<Entity>
 			<ID value="43" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.83398" Z="2.73836" />
 		</Entity>
 		<Entity>
 			<ID value="44" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.68572" Z="8.92523" />
 		</Entity>
 		<Entity>
 			<ID value="45" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.166509" Z="7.8609" />
 		</Entity>
 		<Entity>
 			<ID value="46" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.82824" Z="1.18293" />
 		</Entity>
 		<Entity>
 			<ID value="47" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.24772" Z="8.57448" />
 		</Entity>
 		<Entity>
 			<ID value="48" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.527177" Z="1.93442" />
 		</Entity>
 		<Entity>
 			<ID value="49" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.73708" Z="7.39753" />
 		</Entity>
 		<Entity>
 			<ID value="50" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.49355" Z="1.78884" />
 		</Entity>
 		<Entity>
 			<ID value="51" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.29814" Z="9.32872" />
 		</Entity>
 		<Entity>
 			<ID value="52" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.722495" Z="5.38038" />
 		</Entity>
 		<Entity>
 			<ID value="53" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.31211" Z="7.92077" />
 		</Entity>
 		<Entity>
 			<ID value="54" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.343211" Z="7.29206" />
 		</Entity>
 		<Entity>
 			<ID value="55" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.83038" Z="4.84341" />
 		</Entity>
 		<Entity>
 			<ID value="56" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.5114" Z="8.35585" />
 		</Entity>
 		<Entity>
 			<ID value="57" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.788568" Z="5.83688" />
 		</Entity>
 		<Entity>
 			<ID value="58" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.22758" Z="8.48631" />
 		</Entity>
 		<Entity>
 			<ID value="59" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.249824" Z="3.46239" />
 		</Entity>
 		<Entity>
 			<ID value="60" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.21238" Z="6.70455" />
 		</Entity>
 		<Entity>
 			<ID value="61" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.85321" Z="6.56282" />
 		</Entity>
 		<Entity>
 			<ID value="62" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.49812" Z="7.5052" />
 		</Entity>
 		<Entity>
 			<ID value="63" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.332621" Z="9.82916" />
 		</Entity>
 		<Entity>
 			<ID value="64" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.0572528" Z="1.2288" />
 		</Entity>
 		<Entity>
 			<ID value="65" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.32636" Z="8.38853" />
 		</Entity>
 		<Entity>
 			<ID value="66" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.461928" Z="7.59035" />
 		</Entity>
 		<Entity>
 			<ID value="67" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.9469" Z="4.81375" />
 		</Entity>
 		<Entity>
 			<ID value="68" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.248451" Z="6.02118" />
 		</Entity>
 		<Entity>
 			<ID value="69" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.56404" Z="5.46498" />
 		</Entity>
 		<Entity>
 			<ID value="70" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.62941" Z="3.98618" />
 		</Entity>
 		<Entity>
 			<ID value="71" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.1222" Z="7.56481" />
 		</Entity>
 		<Entity>
 			<ID value="72" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.274697" Z="3.92108" />
 		</Entity>
 		<Entity>
 			<ID value="73" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.5056" Z="9.9187" />
 		</Entity>
 		<Entity>
 			<ID value="74" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.72692" Z="2.9603" />
 		</Entity>
 		<Entity>
 			<ID value="75" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.30815" Z="3.68294" />
 		</Entity>
 		<Entity>
 			<ID value="76" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.45128" Z="2.09729" />
 		</Entity>
 		<Entity>
 			<ID value="77" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.41633" Z="3.08829" />
 		</Entity>
 		<Entity>
 			<ID value="78" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.79772" Z="5.94702" />
 		</Entity>
 		<Entity>
 			<ID value="79" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="0.785577" Z="9.524" />
 		</Entity>
 		<Entity>
 			<ID value="80" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.91913" Z="7.75488" />
 		</Entity>
 		<Entity>
 			<ID value="81" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.545335" Z="4.88955" />
 		</Entity>
 		<Entity>
 			<ID value="82" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.345744" Z="3.81753" />
 		</Entity>
 		<Entity>
 			<ID value="83" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.20789" Z="2.62218" />
 		</Entity>
 		<Entity>
 			<ID value="84" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.05576" Z="4.96701" />
 		</Entity>
 		<Entity>
 			<ID value="85" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.99268" Z="9.30235" />
 		</Entity>
 		<Entity>
 			<ID value="86" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="2.20286" Z="8.27427" />
 		</Entity>
 		<Entity>
 			<ID value="87" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.64415" Z="6.24421" />
 		</Entity>
 		<Entity>
 			<ID value="88" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.28694" Z="4.63219" />
 		</Entity>
 		<Entity>
 			<ID value="89" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.64696" Z="1.98386" />
 		</Entity>
 		<Entity>
 			<ID value="90" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.357799" Z="3.36955" />
 		</Entity>
 		<Entity>
 			<ID value="91" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.98764" Z="4.06143" />
 		</Entity>
 		<Entity>
 			<ID value="92" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.134251" Z="5.55644" />
 		</Entity>
 		<Entity>
 			<ID value="93" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-0.48674" Z="6.00909" />
 		</Entity>
 		<Entity>
 			<ID value="94" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="1.53847" Z="6.15247" />
 		</Entity>
 		<Entity>
 			<ID value="95" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="96" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="97" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="98" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="99" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="100" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="101" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="102" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="103" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="104" />
-			<Position X="-8.5" Y="0" Z="1.25" />
-		</Entity>
-		<Entity>
-			<ID value="105" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="106" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="107" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="108" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="109" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="110" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="111" />
-			<Position X="-3" Y="2" Z="-1" />
-		</Entity>
-		<Entity>
-			<ID value="112" />
-			<Position X="-3" Y="2" Z="-1" />
+			<Position X="-3" Y="-1.98627" Z="8.95325" />
 		</Entity>
 	</Entities>
 </Game>

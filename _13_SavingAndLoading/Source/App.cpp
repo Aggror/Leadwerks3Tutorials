@@ -35,7 +35,6 @@ void SaveToXML()
 	//Root node
 	xml_node rootNode = xmlStorage.append_child("Game");
 		
-
 	// Entities node stores entities
 	xml_node entitiesNode = rootNode.append_child("Entities");
 	
@@ -179,7 +178,7 @@ bool App::Loop()
 			Entity* entity = *iter;
 			if(entity->GetKeyValue("name") == "Oildrum")
 			{
-				entity->SetPosition(-3,2,-1);
+				entity->SetPosition( -3, Math::Random(3.0, -2.0), Math::Random(1.0, 10.0));
 			}
 		}
 	}

@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96331F06164B20A600C8BD8E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96331F05164B20A600C8BD8E /* OpenAL.framework */; };
+		96331F5F164B457A00C8BD8E /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96331F5E164B457A00C8BD8E /* AppDelegate.mm */; };
+		96331F61164B458200C8BD8E /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96331F60164B458200C8BD8E /* ViewController.mm */; };
+		96BD83A01678076A00C99986 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 96BD839F1678076A00C99986 /* data */; };
+		96C3A08716D0B9CA00B38F2B /* data.zip in Resources */ = {isa = PBXBuildFile; fileRef = 96C3A08616D0B9CA00B38F2B /* data.zip */; };
+		CC96E23D1648913000504403 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96E23C1648913000504403 /* UIKit.framework */; };
+		CC96E23F1648913000504403 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96E23E1648913000504403 /* Foundation.framework */; };
+		CC96E2411648913000504403 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96E2401648913000504403 /* CoreGraphics.framework */; };
+		CC96E2431648913000504403 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96E2421648913000504403 /* GLKit.framework */; };
+		CC96E2451648913000504403 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC96E2441648913000504403 /* OpenGLES.framework */; };
+		CC96E24B1648913000504403 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC96E2491648913000504403 /* InfoPlist.strings */; };
+		CC96E24D1648913000504403 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC96E24C1648913000504403 /* main.mm */; };
+		CC96E2531648913000504403 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CC96E2521648913000504403 /* Default.png */; };
+		CC96E2551648913000504403 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC96E2541648913000504403 /* Default@2x.png */; };
+		CC96E2571648913000504403 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC96E2561648913000504403 /* Default-568h@2x.png */; };
+		CC96E2591648913000504403 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CC96E2581648913000504403 /* Shader.fsh */; };
+		CC96E25B1648913000504403 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = CC96E25A1648913000504403 /* Shader.vsh */; };
+		CC96E2611648913000504403 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC96E25F1648913000504403 /* ViewController_iPhone.xib */; };
+		CC96E2641648913000504403 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC96E2621648913000504403 /* ViewController_iPad.xib */; };
+		CC96E2841648946900504403 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC96E2831648946900504403 /* App.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96331F05164B20A600C8BD8E /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		96331F0D164B22BB00C8BD8E /* iOSFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iOSFunctions.h; path = _12_Android/iOSFunctions.h; sourceTree = SOURCE_ROOT; };
+		96331F5E164B457A00C8BD8E /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = _12_Android/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		96331F60164B458200C8BD8E /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ViewController.mm; path = _12_Android/ViewController.mm; sourceTree = SOURCE_ROOT; };
+		96331F62164B458F00C8BD8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = _12_Android/AppDelegate.h; sourceTree = "<group>"; };
+		96331F63164B458F00C8BD8E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = _12_Android/ViewController.h; sourceTree = "<group>"; };
+		96BD839F1678076A00C99986 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		96C3A08616D0B9CA00B38F2B /* data.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = data.zip; sourceTree = "<group>"; };
+		CC96E2381648913000504403 /* _12_Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _12_Android.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC96E23C1648913000504403 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CC96E23E1648913000504403 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CC96E2401648913000504403 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CC96E2421648913000504403 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		CC96E2441648913000504403 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CC96E2481648913000504403 /* _12_Android-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "_12_Android-Info.plist"; path = "_12_Android/_12_Android-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CC96E24A1648913000504403 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC96E24C1648913000504403 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = _12_Android/main.mm; sourceTree = SOURCE_ROOT; };
+		CC96E24E1648913000504403 /* _12_Android-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "_12_Android-Prefix.pch"; path = "_12_Android/_12_Android-Prefix.pch"; sourceTree = "<group>"; };
+		CC96E2521648913000504403 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = _12_Android/Default.png; sourceTree = SOURCE_ROOT; };
+		CC96E2541648913000504403 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "_12_Android/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		CC96E2561648913000504403 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "_12_Android/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		CC96E2581648913000504403 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = _12_Android/Shaders/Shader.fsh; sourceTree = SOURCE_ROOT; };
+		CC96E25A1648913000504403 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = _12_Android/Shaders/Shader.vsh; sourceTree = SOURCE_ROOT; };
+		CC96E2601648913000504403 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		CC96E2631648913000504403 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		CC96E2811648945D00504403 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = App.h; path = ../../Source/App.h; sourceTree = "<group>"; };
+		CC96E2831648946900504403 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = App.cpp; path = ../../Source/App.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC96E2351648913000504403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96331F06164B20A600C8BD8E /* OpenAL.framework in Frameworks */,
+				CC96E23D1648913000504403 /* UIKit.framework in Frameworks */,
+				CC96E23F1648913000504403 /* Foundation.framework in Frameworks */,
+				CC96E2411648913000504403 /* CoreGraphics.framework in Frameworks */,
+				CC96E2431648913000504403 /* GLKit.framework in Frameworks */,
+				CC96E2451648913000504403 /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96331F68164B55C000C8BD8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96C3A08616D0B9CA00B38F2B /* data.zip */,
+				96BD839F1678076A00C99986 /* data */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CC96E22D1648913000504403 = {
+			isa = PBXGroup;
+			children = (
+				CC96E23B1648913000504403 /* Frameworks */,
+				CC96E271164892C200504403 /* Header Files */,
+				CC96E2391648913000504403 /* Products */,
+				96331F68164B55C000C8BD8E /* Resources */,
+				CC96E2461648913000504403 /* Source */,
+				CC96E2471648913000504403 /* Supporting Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CC96E2391648913000504403 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC96E2381648913000504403 /* _12_Android.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC96E23B1648913000504403 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96331F05164B20A600C8BD8E /* OpenAL.framework */,
+				CC96E23C1648913000504403 /* UIKit.framework */,
+				CC96E23E1648913000504403 /* Foundation.framework */,
+				CC96E2401648913000504403 /* CoreGraphics.framework */,
+				CC96E2421648913000504403 /* GLKit.framework */,
+				CC96E2441648913000504403 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC96E2461648913000504403 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CC96E2831648946900504403 /* App.cpp */,
+				96331F5E164B457A00C8BD8E /* AppDelegate.mm */,
+				96331F0D164B22BB00C8BD8E /* iOSFunctions.h */,
+				CC96E24C1648913000504403 /* main.mm */,
+				96331F60164B458200C8BD8E /* ViewController.mm */,
+			);
+			name = Source;
+			path = _12_Android;
+			sourceTree = "<group>";
+		};
+		CC96E2471648913000504403 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC96E25F1648913000504403 /* ViewController_iPhone.xib */,
+				CC96E2621648913000504403 /* ViewController_iPad.xib */,
+				CC96E2581648913000504403 /* Shader.fsh */,
+				CC96E25A1648913000504403 /* Shader.vsh */,
+				CC96E2481648913000504403 /* _12_Android-Info.plist */,
+				CC96E2491648913000504403 /* InfoPlist.strings */,
+				CC96E2521648913000504403 /* Default.png */,
+				CC96E2541648913000504403 /* Default@2x.png */,
+				CC96E2561648913000504403 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			path = _12_Android;
+			sourceTree = "<group>";
+		};
+		CC96E271164892C200504403 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC96E2811648945D00504403 /* App.h */,
+				96331F62164B458F00C8BD8E /* AppDelegate.h */,
+				96331F63164B458F00C8BD8E /* ViewController.h */,
+				CC96E24E1648913000504403 /* _12_Android-Prefix.pch */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC96E2371648913000504403 /* _12_Android */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC96E2671648913000504403 /* Build configuration list for PBXNativeTarget "_12_Android" */;
+			buildPhases = (
+				CC96E2341648913000504403 /* Sources */,
+				CC96E2351648913000504403 /* Frameworks */,
+				CC96E2361648913000504403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = _12_Android;
+			productName = _12_Android;
+			productReference = CC96E2381648913000504403 /* _12_Android.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC96E22F1648913000504403 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Leadwerks Software";
+			};
+			buildConfigurationList = CC96E2321648913000504403 /* Build configuration list for PBXProject "_12_Android" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CC96E22D1648913000504403;
+			productRefGroup = CC96E2391648913000504403 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC96E2371648913000504403 /* _12_Android */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC96E2361648913000504403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC96E24B1648913000504403 /* InfoPlist.strings in Resources */,
+				CC96E2531648913000504403 /* Default.png in Resources */,
+				CC96E2551648913000504403 /* Default@2x.png in Resources */,
+				CC96E2571648913000504403 /* Default-568h@2x.png in Resources */,
+				CC96E2591648913000504403 /* Shader.fsh in Resources */,
+				CC96E25B1648913000504403 /* Shader.vsh in Resources */,
+				CC96E2611648913000504403 /* ViewController_iPhone.xib in Resources */,
+				CC96E2641648913000504403 /* ViewController_iPad.xib in Resources */,
+				96BD83A01678076A00C99986 /* data in Resources */,
+				96C3A08716D0B9CA00B38F2B /* data.zip in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC96E2341648913000504403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC96E24D1648913000504403 /* main.mm in Sources */,
+				CC96E2841648946900504403 /* App.cpp in Sources */,
+				96331F5F164B457A00C8BD8E /* AppDelegate.mm in Sources */,
+				96331F61164B458200C8BD8E /* ViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CC96E2491648913000504403 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC96E24A1648913000504403 /* en */,
+			);
+			name = InfoPlist.strings;
+			path = _12_Android;
+			sourceTree = SOURCE_ROOT;
+		};
+		CC96E25F1648913000504403 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC96E2601648913000504403 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			path = _12_Android;
+			sourceTree = SOURCE_ROOT;
+		};
+		CC96E2621648913000504403 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC96E2631648913000504403 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			path = _12_Android;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC96E2651648913000504403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IOS,
+					unix,
+					_NEWTON_USE_LIB,
+					OS_IOS,
+					PLATFORM_IOS,
+					DEBUG,
+					OPENGLES,
+					DARWIN_NO_CARBON,
+					FT2_BUILD_LIBRARY,
+					PIC,
+					_NEWTON_STATIC_LIB,
+					_MAC_VER,
+					_POSIX_VER_64,
+					_POSIX_VER,
+					DG_THREAD_EMULATION,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Applications/Leadwerks/Engine/Source/Libraries/freetype-2.4.7/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/lua-5.1.4/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/tolua++-1.0.93/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/glew-1.6.0/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/newtondynamics/coreLibrary_300/source/newton/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/newtondynamics/coreLibrary_300/source/physics/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/newtondynamics/coreLibrary_300/source/core/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/newtondynamics/coreLibrary_300/source/meshUtil/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/enet-1.3.1/include",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/DebugUtils/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/Detour/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/DetourCrowd/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/DetourTileCache/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/Recast/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/NewtonDynamics/Packages/dCustomJoints/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/NewtonDynamics/Packages/dMath/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/NewtonDynamics/Packages/dContainers/**",
+					/Applications/Leadwerks/Engine/Source,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "/Applications/Leadwerks/Engine/Library/iOS/**";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC96E2661648913000504403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IOS,
+					unix,
+					_NEWTON_USE_LIB,
+					OS_IOS,
+					PLATFORM_IOS,
+					OPENGLES,
+					DARWIN_NO_CARBON,
+					FT2_BUILD_LIBRARY,
+					PIC,
+					_NEWTON_STATIC_LIB,
+					_MAC_VER,
+					_POSIX_VER,
+					_POSIX_VER_64,
+					DG_THREAD_EMULATION,
+				);
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Applications/Leadwerks/Engine/Source/Libraries/freetype-2.4.7/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/lua-5.1.4/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/tolua++-1.0.93/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/glew-1.6.0/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/newtondynamics/coreLibrary_300/source/newton/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/newtondynamics/coreLibrary_300/source/physics/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/newtondynamics/coreLibrary_300/source/core/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/newtondynamics/coreLibrary_300/source/meshUtil/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/enet-1.3.1/include",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/DebugUtils/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/Detour/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/DetourCrowd/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/DetourTileCache/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/recastnavigation/Recast/include/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/NewtonDynamics/Packages/dCustomJoints/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/NewtonDynamics/Packages/dMath/**",
+					"/Applications/Leadwerks/Engine/Source/Libraries/NewtonDynamics/Packages/dContainers/**",
+					/Applications/Leadwerks/Engine/Source,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "/Applications/Leadwerks/Engine/Library/iOS/**";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC96E2681648913000504403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "_12_Android/_12_Android-Prefix.pch";
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INFOPLIST_FILE = "_12_Android/_12_Android-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Applications/Leadwerks/Engine/Library/iphoneos/Debug\"",
+					"\"/Applications/Leadwerks/Engine/Library/iphonesimulator/Debug\"",
+					"\"$(SYSTEM_APPS_DIR)/Leadwerks/Engine/Library/iphoneos/Release\"",
+				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = /Applications/Leadwerks/Engine/Library/iphoneos/Debug/Leadwerks.a;
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = /Applications/Leadwerks/Engine/Library/iphonesimulator/Debug/Leadwerks.a;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CC96E2691648913000504403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "_12_Android/_12_Android-Prefix.pch";
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INFOPLIST_FILE = "_12_Android/_12_Android-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Applications/Leadwerks/Engine/Library/iphonesimulator/Debug\"",
+					"\"/Applications/Leadwerks/Engine/Library/iphoneos/Release\"",
+					"\"$(SYSTEM_APPS_DIR)/Leadwerks/Engine/Library/iphoneos/Debug\"",
+				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = /Applications/Leadwerks/Engine/Library/iphoneos/Release/Leadwerks.a;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC96E2321648913000504403 /* Build configuration list for PBXProject "_12_Android" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC96E2651648913000504403 /* Debug */,
+				CC96E2661648913000504403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC96E2671648913000504403 /* Build configuration list for PBXNativeTarget "_12_Android" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC96E2681648913000504403 /* Debug */,
+				CC96E2691648913000504403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC96E22F1648913000504403 /* Project object */;
+}
