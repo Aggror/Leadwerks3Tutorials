@@ -51,7 +51,7 @@ void SaveToXML()
 
 		// Store ID node
 		xml_node idNode = entityNode.append_child("ID");
-		idNode.append_attribute("value") = id;
+		idNode.append_attribute("id") = id;
 		id++;
 		
 		// Entities node stores entities
@@ -83,12 +83,11 @@ void LoadFromXML()
 	xml_node entitiesNode = xmlStorage.child("Game").child("Entities");
 
 	//Go through all entities
-	int i = 0;
 	for (xml_node entity = entitiesNode.first_child(); entity; entity = entity.next_sibling())
 	{
 		//Retrieve idNode
 		xml_node idNode = entity.child("ID");
-		int id = XMLToFloat(idNode.attribute("X").value());
+		int id = XMLToFloat(idNode.attribute("id").value());
 
 		//Retrieve positionNode
 		xml_node positionNode = entity.child("Position");
@@ -96,8 +95,8 @@ void LoadFromXML()
 		//std::cout << "Y: " << positionNode.attribute("Y").value();
 		//std::cout << "Z: " << positionNode.attribute("Z").value();
 		entities[id]->SetPosition(XMLToFloat(positionNode.attribute("X").value()),
-										XMLToFloat(positionNode.attribute("Y").value()),
-										XMLToFloat(positionNode.attribute("Z").value()));
+									XMLToFloat(positionNode.attribute("Y").value()),
+									XMLToFloat(positionNode.attribute("Z").value()));
 	
 	}
 	

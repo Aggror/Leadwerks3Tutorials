@@ -140,7 +140,9 @@
     </Library>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\save_file_output.xml" />
+    <None Include="..\..\save_file_output.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
