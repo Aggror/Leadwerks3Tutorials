@@ -12,9 +12,20 @@ Vec3 camerarotation;
 
 //Store all the npc
 NPC* npc1;
+NPC* npc2;
 Beggar* beggar;
 
 Model* pickSphere;
+Entity* wayPoint;
+
+void StoreWorldObjects(Entity* entity, Object* extra)
+{
+	if(entity->GetKeyValue("name") == "WayPointPath1")
+	{
+		wayPoint = entity;
+	}
+
+}
 
 bool App::Start()
 {
@@ -34,7 +45,7 @@ bool App::Start()
 	//Hide the mouse cursor
 	window->HideMouse();
 	
-	Map::Load("Maps/pathfinding-endResult.map");
+	Map::Load("Maps/pathfinding-endResult.map", StoreWorldObjects);
 	
 	//Move the mouse to the center of the screen
 	window->SetMousePosition(context->GetWidth()/2,context->GetHeight()/2);

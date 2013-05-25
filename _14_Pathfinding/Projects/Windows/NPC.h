@@ -10,11 +10,11 @@ public:
 	NPC(Leadwerks::Vec3 startPos, float speed, float acceleration);
 	~NPC();
 
-
 	void SetTarget(Leadwerks::Vec3 target);
 	void CheckDestination();
+	void SetWayPointPath(Entity* wayPointPath);
 
-	//list<Leadwerks::Entity*>waypoints;
+	list<Leadwerks::Entity* >waypoints;
 	Leadwerks::Vec3 currentTarget;
 
 	Leadwerks::Pivot* characterController;

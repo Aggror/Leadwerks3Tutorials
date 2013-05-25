@@ -22,6 +22,19 @@ NPC::NPC(Vec3 startPos, float speed, float acceleration)
     characterController->SetPhysicsMode(Entity::CharacterPhysics);
 }
 
+void NPC::SetWayPointPath(Entity* wayPointPath)
+{
+	//Get the amount of children
+	int children = wayPointPath->CountChildren();
+
+	//Get all the children and store them in waypoints list
+	for (int i = 0; i < children; i++)
+	{
+		waypoints.push_back(wayPointPath->GetChild(i));
+	}
+
+}
+
 void NPC::SetTarget(Vec3 target)
 {
 	currentTarget = target;
