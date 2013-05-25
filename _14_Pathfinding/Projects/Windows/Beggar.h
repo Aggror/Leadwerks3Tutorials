@@ -1,15 +1,15 @@
 #pragma once
 
-#include "NPC.h"
+#include "Person.h"
 
-class Beggar: public NPC
+class Beggar: public Person
 {
 public:
-	Beggar(NPC* npc, Leadwerks:: Vec3 startPos, float speed, float accelaration, float noticeDistance, float ignoreDistance);
+	Beggar(Person* player, Leadwerks::Vec3 startPos, float speed, float accelaration, float noticeDistance, float ignoreDistance);
 	~Beggar();
-	void CheckNPCDistance();
+	void CheckPlayerDistance();
 
-	NPC* npc;
+	Person* player;
 	float noticeDistance;
 	float ignoreDistance;
 };

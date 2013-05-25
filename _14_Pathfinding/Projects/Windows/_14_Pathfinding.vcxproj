@@ -114,12 +114,14 @@
     <ClCompile Include="..\..\Source\App.cpp" />
     <ClCompile Include="..\..\Source\main.cpp" />
     <ClCompile Include="Beggar.cpp" />
-    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\App.h" />
     <ClInclude Include="Beggar.h" />
-    <ClInclude Include="NPC.h" />
+    <ClInclude Include="Guard.h" />
+    <ClInclude Include="Person.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuildStep Include="C:/Leadwerks\Engine\Library\StaticLib\Debug\Leadwerks.lib">

@@ -1,12 +1,12 @@
-#include "NPC.h"
+#include "Person.h"
 
 using namespace Leadwerks;
 
-NPC::NPC()
+Person::Person()
 {
 }
 
-NPC::NPC(Vec3 startPos, float speed, float acceleration)
+Person::Person(Vec3 startPos, float speed, float acceleration)
 {
 	this->speed = speed;
 	this->acceleration = acceleration;
@@ -22,27 +22,14 @@ NPC::NPC(Vec3 startPos, float speed, float acceleration)
     characterController->SetPhysicsMode(Entity::CharacterPhysics);
 }
 
-void NPC::SetWayPointPath(Entity* wayPointPath)
-{
-	//Get the amount of children
-	int children = wayPointPath->CountChildren();
-
-	//Get all the children and store them in waypoints list
-	for (int i = 0; i < children; i++)
-	{
-		waypoints.push_back(wayPointPath->GetChild(i));
-	}
-
-}
-
-void NPC::SetTarget(Vec3 target)
+void Person::SetTarget(Vec3 target)
 {
 	currentTarget = target;
 	characterController->GoToPoint(target, speed, acceleration);
 	state = State::WALKING;
 }
 
-void NPC::CheckDestination()
+void Person::CheckDestination()
 {
 	//Stop the player when he gets close to the destination
 	if (characterController->GetPosition().DistanceToPoint(currentTarget)<1.0)
@@ -54,7 +41,7 @@ void NPC::CheckDestination()
 }
 	
 
-NPC::~NPC()
+Person::~Person()
 {	
 	characterController->Release();
 	characterMesh->Release();

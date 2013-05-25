@@ -2,11 +2,11 @@
 
 using namespace Leadwerks;
 
-Beggar::Beggar(NPC* npc, Vec3 startPos, float speed, float accelaration, float noticeDistance, float ignoreDistance)
-	: NPC(startPos, speed, accelaration)
+Beggar::Beggar(Person* player, Vec3 startPos, float speed, float accelaration, float noticeDistance, float ignoreDistance)
+	: Person(startPos, speed, accelaration)
 {
 	//Set variables
-	this->npc = npc;
+	this->player = player;
 	state = State::IDLE;
 	this->noticeDistance = noticeDistance;
 	this->ignoreDistance = ignoreDistance;
@@ -15,21 +15,21 @@ Beggar::Beggar(NPC* npc, Vec3 startPos, float speed, float accelaration, float n
 	characterMesh->SetColor(1,0,0,0);
 }
 
-void Beggar::CheckNPCDistance()
+void Beggar::CheckPlayerDistance()
 {
 	Vec3 beggarPos = characterController->GetPosition();
-	Vec3 npcPos = npc->characterController->GetPosition();
-	float npcDistanace = beggarPos.DistanceToPoint(npcPos);
+	Vec3 playerPos = player->characterController->GetPosition();
+	float playerDistanace = beggarPos.DistanceToPoint(playerPos);
 	
 	//Check if the npc is close the beggar, if it is, start following
-	if(state == State::IDLE && npcDistanace < noticeDistance)
+	if(state == State::IDLE && playerDistanace < noticeDistance)
 	{
 		state = State::FOLLOWING;
-		characterController->Follow(npc->characterController, speed, acceleration);
+		characterController->Follow(player->characterController, speed, acceleration);
 
 	}
 	//If the npc is to far away then stop following him
-	else if(state == State::FOLLOWING && npcDistanace > ignoreDistance)
+	else if(state == State::FOLLOWING && playerDistanace > ignoreDistance)
 	{
 		//Stop following and go to idle
 		characterController->Stop();
@@ -40,5 +40,5 @@ void Beggar::CheckNPCDistance()
 
 Beggar::~Beggar()
 {
-	delete npc;
+	delete player;
 }

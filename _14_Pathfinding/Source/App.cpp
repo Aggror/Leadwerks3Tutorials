@@ -1,6 +1,7 @@
 #include "App.h"
-#include "../Projects/Windows/NPC.h"
+#include "../Projects/Windows/Person.h"
 #include "../Projects/Windows/Beggar.h"
+#include "../Projects/Windows/Guard.h"
 
 using namespace Leadwerks;
 
@@ -11,18 +12,17 @@ App::~App() { delete world; delete window; }
 Vec3 camerarotation;
 
 //Store all the npc
-NPC* npc1;
-NPC* npc2;
+Person* player;
 Beggar* beggar;
+Guard* guard;
 
 Model* pickSphere;
-Entity* wayPoint;
 
-void StoreWorldObjects(Entity* entity, Object* extra)
+void LookForWayPointObjects(Entity* entity, Object* extra)
 {
 	if(entity->GetKeyValue("name") == "WayPointPath1")
 	{
-		wayPoint = entity;
+		guard = new Guard(entity, Vec3(entity->GetPosition()), 4, 4);
 	}
 
 }
@@ -45,16 +45,16 @@ bool App::Start()
 	//Hide the mouse cursor
 	window->HideMouse();
 	
-	Map::Load("Maps/pathfinding-endResult.map", StoreWorldObjects);
+	Map::Load("Maps/pathfinding-endResult.map", LookForWayPointObjects);
 	
 	//Move the mouse to the center of the screen
 	window->SetMousePosition(context->GetWidth()/2,context->GetHeight()/2);
 
-	//NPC's
-	npc1 = new NPC(Vec3(-1,5,0), 5, 3);
+	//Player
+	player = new Person(Vec3(-1,5,0), 5, 3);
 	
 	//Beggar
-	beggar = new Beggar(npc1, Vec3(13,5,-1), 4, 2, 2, 15);
+	beggar = new Beggar(player, Vec3(13,5,-1), 4, 2, 2, 15);
 	
 	//picksphere
 	pickSphere = Model::Sphere(12);
@@ -68,6 +68,9 @@ bool App::Loop()
 	//Close the window to end the program
 	if (window->Closed() || window->KeyHit(Key::Escape)) return false;
     
+	if(window->KeyHit(Key::P))
+		camera->drawphysicsmode = !camera->drawphysicsmode;
+
 	//Keyboard movement
 	float strafe = (window->KeyDown(Key::D) - window->KeyDown(Key::A))*Time::GetSpeed() * 0.1;
 	float move = (window->KeyDown(Key::W) - window->KeyDown(Key::S))*Time::GetSpeed() * 0.1;
@@ -97,17 +100,19 @@ bool App::Loop()
             if (camera->Pick(p.x,p.y,pickinfo,0,true))
             {
                     pickSphere->SetPosition(pickinfo.position);
-					npc1->SetTarget(pickinfo.position);
+					player->SetTarget(pickinfo.position);
             }
     }
 	
 	//Only check for destination if npc is walking
-	if(npc1->state == NPC::State::WALKING)
-		npc1->CheckDestination();
+	if(player->state == Person::State::WALKING)
+		player->CheckDestination();
 
-	//Allways chec the beggar
-	beggar->CheckNPCDistance();
+	//Allways check the beggar
+	beggar->CheckPlayerDistance();
 
+	//Update the guard
+	//guard->CheckPathProgress();
 
 	Time::Update();
 	world->Update();

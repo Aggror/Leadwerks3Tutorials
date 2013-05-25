@@ -7,8 +7,9 @@
     <ClCompile Include="..\..\Source\main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Beggar.cpp" />
+    <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="C:/Leadwerks\Engine\Library\Windows\Release\Leadwerks.lib">
@@ -42,7 +43,8 @@
     <ClInclude Include="..\..\Source\App.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NPC.h" />
     <ClInclude Include="Beggar.h" />
+    <ClInclude Include="Guard.h" />
+    <ClInclude Include="Person.h" />
   </ItemGroup>
 </Project>

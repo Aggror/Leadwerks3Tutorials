@@ -3,20 +3,17 @@
 #include "Leadwerks.h"
 
 
-class NPC
+class Person
 {
 public:
-	NPC();
-	NPC(Leadwerks::Vec3 startPos, float speed, float acceleration);
-	~NPC();
+	Person();
+	Person(Leadwerks::Vec3 startPos, float speed, float acceleration);
+	~Person();
 
 	void SetTarget(Leadwerks::Vec3 target);
 	void CheckDestination();
-	void SetWayPointPath(Entity* wayPointPath);
 
-	list<Leadwerks::Entity* >waypoints;
 	Leadwerks::Vec3 currentTarget;
-
 	Leadwerks::Pivot* characterController;
 	Leadwerks::Model* characterMesh;
 	float speed;
