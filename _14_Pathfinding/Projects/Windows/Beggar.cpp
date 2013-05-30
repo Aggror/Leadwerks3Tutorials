@@ -17,6 +17,7 @@ Beggar::Beggar(Person* player, Vec3 startPos, float speed, float accelaration, f
 
 void Beggar::CheckPlayerDistance()
 {
+	//Retrieve distance between beggar and player
 	Vec3 beggarPos = characterController->GetPosition();
 	Vec3 playerPos = player->characterController->GetPosition();
 	float playerDistanace = beggarPos.DistanceToPoint(playerPos);
@@ -40,5 +41,4 @@ void Beggar::CheckPlayerDistance()
 
 Beggar::~Beggar()
 {
-	delete player;
 }

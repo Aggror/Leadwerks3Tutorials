@@ -2,7 +2,6 @@
 
 #include "Leadwerks.h"
 
-
 class Person
 {
 public:
@@ -27,7 +26,5 @@ public:
 		FOLLOWING
 	};
 	State state;
-
-
 };
 

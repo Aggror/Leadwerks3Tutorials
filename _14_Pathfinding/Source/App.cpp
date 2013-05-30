@@ -1,7 +1,6 @@
 #include "App.h"
 #include "../Projects/Windows/Person.h"
 #include "../Projects/Windows/Beggar.h"
-#include "../Projects/Windows/Guard.h"
 
 using namespace Leadwerks;
 
@@ -35,7 +34,7 @@ bool App::Start()
 	//Hide the mouse cursor
 	window->HideMouse();
 	
-	Map::Load("Maps/pathfinding-endResult.map");
+	Map::Load("Maps/start.map");
 	
 	//Move the mouse to the center of the screen
 	window->SetMousePosition(context->GetWidth()/2,context->GetHeight()/2);
