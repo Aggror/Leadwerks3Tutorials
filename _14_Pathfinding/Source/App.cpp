@@ -14,18 +14,8 @@ Vec3 camerarotation;
 //Store all the npc
 Person* player;
 Beggar* beggar;
-Guard* guard;
 
 Model* pickSphere;
-
-void LookForWayPointObjects(Entity* entity, Object* extra)
-{
-	if(entity->GetKeyValue("name") == "WayPointPath1")
-	{
-		guard = new Guard(entity, Vec3(entity->GetPosition()), 4, 4);
-	}
-
-}
 
 bool App::Start()
 {
@@ -45,7 +35,7 @@ bool App::Start()
 	//Hide the mouse cursor
 	window->HideMouse();
 	
-	Map::Load("Maps/pathfinding-endResult.map", LookForWayPointObjects);
+	Map::Load("Maps/pathfinding-endResult.map");
 	
 	//Move the mouse to the center of the screen
 	window->SetMousePosition(context->GetWidth()/2,context->GetHeight()/2);
@@ -91,8 +81,7 @@ bool App::Loop()
 	//Move the mouse to the center of the screen
 	window->SetMousePosition(sx,sy);
 	
-	//Place a new target position for our npc
-	PickInfo pick;
+	//Place a new target position for our npcewa
 	if (window->MouseHit(1))
     {
             PickInfo pickinfo;
@@ -110,10 +99,7 @@ bool App::Loop()
 
 	//Allways check the beggar
 	beggar->CheckPlayerDistance();
-
-	//Update the guard
-	//guard->CheckPathProgress();
-
+		
 	Time::Update();
 	world->Update();
 	world->Render();

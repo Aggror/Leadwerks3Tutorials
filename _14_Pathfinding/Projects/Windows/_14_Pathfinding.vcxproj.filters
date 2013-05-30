@@ -8,7 +8,6 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Beggar.cpp" />
-    <ClCompile Include="Guard.cpp" />
     <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -44,7 +43,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Beggar.h" />
-    <ClInclude Include="Guard.h" />
     <ClInclude Include="Person.h" />
   </ItemGroup>
 </Project>

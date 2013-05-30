@@ -21,14 +21,14 @@ void Beggar::CheckPlayerDistance()
 	Vec3 playerPos = player->characterController->GetPosition();
 	float playerDistanace = beggarPos.DistanceToPoint(playerPos);
 	
-	//Check if the npc is close the beggar, if it is, start following
+	//Check if the player is close the beggar, if it is, start following
 	if(state == State::IDLE && playerDistanace < noticeDistance)
 	{
 		state = State::FOLLOWING;
 		characterController->Follow(player->characterController, speed, acceleration);
 
 	}
-	//If the npc is to far away then stop following him
+	//If the player is to far away then stop following him
 	else if(state == State::FOLLOWING && playerDistanace > ignoreDistance)
 	{
 		//Stop following and go to idle

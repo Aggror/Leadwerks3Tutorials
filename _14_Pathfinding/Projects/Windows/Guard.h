@@ -9,7 +9,7 @@ public:
 
 	void CheckPathProgress();
 	void GetAllWayPoints(Leadwerks::Entity* wayPointPath);
-	list<Leadwerks::Entity*> wayPoints;
-	list<Leadwerks::Entity*>::iterator currentIter;
+	vector<Leadwerks::Vec3> wayPoints;
+	int currentWaypoint;
 };
 

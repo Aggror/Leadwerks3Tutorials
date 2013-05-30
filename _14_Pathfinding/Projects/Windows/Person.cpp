@@ -24,6 +24,7 @@ Person::Person(Vec3 startPos, float speed, float acceleration)
 
 void Person::SetTarget(Vec3 target)
 {
+	//set the target where the player has to walk to.
 	currentTarget = target;
 	characterController->GoToPoint(target, speed, acceleration);
 	state = State::WALKING;
@@ -40,7 +41,6 @@ void Person::CheckDestination()
 	}
 }
 	
-
 Person::~Person()
 {	
 	characterController->Release();
