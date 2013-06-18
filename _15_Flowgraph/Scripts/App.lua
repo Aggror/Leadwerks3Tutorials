@@ -2,7 +2,7 @@
 function App:Start()
 	
 	--Set the application title
-	self.title="_15_Flowgraph"
+	self.title="asd"
 	
 	--Create a window
 	self.window=Window:Create(self.title)
@@ -14,7 +14,6 @@ function App:Start()
 	
 	--Create a world
 	self.world=World:Create()
-	self.camera=Camera:Create()
 	
 	--Load a map
 	local mapfile = System:GetProperty("map","Maps/start.map")
